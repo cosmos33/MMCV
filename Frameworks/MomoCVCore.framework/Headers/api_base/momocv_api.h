@@ -416,6 +416,14 @@ namespace mmcv
         float score_;
     };
 
+    
+    enum MMBusinessType
+    {
+        MBT_NONE  = 0,
+        MBT_SHORTVIDEO = 1,
+        MBT_LIVEVIDEO = 2,
+    };
+    
     class MMCV_EXPORT BaseParams
     {
     public:
@@ -442,12 +450,17 @@ namespace mmcv
         // [false, true] 
         // flip results or not. flip is after restore_degree_ rotation.
         bool fliped_show_;
+        
+        // [MBT_NONE, MBT_SHORTVIDEO, MBT_LIVEVIDEO]
+        // default is MBT_NONE
+        int business_type_;
 		
 		friend std::ostream& operator<<(std::ostream& out, const BaseParams& baseparams)
         {
             out << "BaseParams.rotate_degree_: " << baseparams.rotate_degree_ << "\n"
                 << "BaseParams.restore_degree_:  "<< baseparams.restore_degree_ << "\n"
-                << "BaseParams.fliped_show_:  "<< baseparams.fliped_show_ << "\n" ;
+                << "BaseParams.fliped_show_:  "<< baseparams.fliped_show_ << "\n"
+                << "BaseParams.business_type_:  "<< baseparams.business_type_ << "\n" ;;
             return out;
         }
 
@@ -514,6 +527,7 @@ namespace mmcv
             MMCV_ERR_FORMAT                = -1299,
             
             MMCV_ERR_LOSS_FACE             = -999,
+            MMCV_ERR_BIGEULER_OFFSET       = -998,
             
             MMCV_ERR_NOTFACE              = -899,
             
@@ -537,6 +551,7 @@ namespace mmcv
             
             EventStatus mmcv_module_status;
             EventErrorCode mmcv_error_code;
+            mmcv::MMBusinessType mmcv_business_type;
            
             float mmcv_model_loadtime;
             std::string mmcv_model_name;

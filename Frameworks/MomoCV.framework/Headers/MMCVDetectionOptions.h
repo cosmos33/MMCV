@@ -19,4 +19,10 @@ typedef NS_ENUM(NSInteger, MMCVImageOrientation) {
 
 FOUNDATION_EXPORT double MMCVImageRotationDegreeFromOrientation(MMCVImageOrientation orientation);
 
+typedef NS_ENUM(NSInteger, MMCVBusinessType) {
+    MMCVBusinessType_NONE  = 0,
+    MMCVBusinessType_SHORTVIDEO = 1,
+    MMCVBusinessType_LIVEVIDEO = 2,
+};
+
 NS_ASSUME_NONNULL_END

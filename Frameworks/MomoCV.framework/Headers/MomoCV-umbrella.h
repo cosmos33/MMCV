@@ -55,6 +55,7 @@
 #import "MMFaceQualityDetector.h"
 #import "MMArpetProcessor.h"
 #import "MMFaceAnimojiProcessor.h"
+#import "MMCVEventTracker.h"
 #import "MMBodyAdjustment.h"
 
 FOUNDATION_EXPORT double MomoCVVersionNumber;

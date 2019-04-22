@@ -53,6 +53,11 @@ typedef NS_ENUM(NSInteger, MMPoseEstimationType) {
     MMPoseEstimationTypeWithEulers
 };
 
+typedef NS_ENUM(NSInteger, MMFaceAlignmentVersion) {
+    MMFaceAlignmentVersion96Points   = 0,
+    MMFaceAlignmentVersion137Points  = 1
+};
+
 @interface MMEstimatedFaceInfo: NSObject <NSCopying>
 
 @property (nonatomic, readonly) CGRect bounds;
@@ -105,6 +110,11 @@ typedef NS_ENUM(NSInteger, MMPoseEstimationType) {
 @property (nonatomic) NSUInteger maximumFaceCount;
 
 @property (nonatomic) NSUInteger skipFrameCount; // default is 1, no frame skipping
+
+@property (nonatomic) MMCVBusinessType businessType;
+
+@property (nonatomic) MMFaceAlignmentVersion faceAlignmentVersion;
+
 @end
 
 @interface MMFaceDetector : NSObject
