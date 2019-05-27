@@ -27,8 +27,9 @@ Pod::Spec.new do |s|
   s.libraries = 'c++'
 
   s.vendored_frameworks = 'Frameworks/**/*.framework'
-  s.pod_target_xcconfig = { 'ENABLE_BITCODE' => '$(inherited) NO', 'OTHER_LDFLAGS' => '$(inherited) -ObjC', 'MTL_LANGUAGE_REVISION' => 'Metal12'}
+  s.pod_target_xcconfig = { 'ENABLE_BITCODE' => '$(inherited) NO', 'OTHER_LDFLAGS' => '$(inherited) -ObjC', 'MTL_LANGUAGE_REVISION' => 'Metal12', 'CLANG_WARN_DOCUMENTATION_COMMENTS' => '$(inherited) NO'}
 
+  s.dependency 'ZipArchive'
   s.resources = 'Resources/*'
   
 end
