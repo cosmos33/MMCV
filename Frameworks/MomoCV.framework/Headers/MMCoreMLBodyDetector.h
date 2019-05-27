@@ -31,6 +31,8 @@ typedef NS_ENUM(NSUInteger, MMCoreMLBodyDetectModelVersion) {
 
 @property (nonatomic, assign) BOOL modelVersion; // Default V1
 
+@property (nonatomic, assign) float landmarksScale;
+
 
 @end
 

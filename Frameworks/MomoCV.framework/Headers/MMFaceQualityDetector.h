@@ -39,6 +39,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MMFaceQualityOptions : NSObject <NSCopying>
 
+//default is NO;
+//if YES, even face out of screen will evaluate face quality
+@property (nonatomic, assign) BOOL singleFrameEnabled;
+
 @property (nonatomic, assign) BOOL strictQualityDetect; //default is YES
 @property (nonatomic, assign) BOOL livenessDetect;      //default is YES
 @property (nonatomic, assign) BOOL motionBlurDetect;    //default is YES

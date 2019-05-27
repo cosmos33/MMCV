@@ -41,16 +41,16 @@ typedef NS_ENUM(NSInteger, MMFaceDetectionMethod) {
     MMFaceDetectionMethodFastRCNN
 };
 
-typedef NS_ENUM(NSInteger, MMFaceDetectionPerformanceCategory) {
-    MMFaceDetectionPerformanceCategoryDefault,
-    MMFaceDetectionPerformanceCategoryLiveBroadcast
-};
-
 typedef NS_ENUM(NSInteger, MMPoseEstimationType) {
     MMPoseEstimationTypeNormal,
     MMPoseEstimationTypePrecise,
     MMPoseEstimationTypeNormalBy87Points,
     MMPoseEstimationTypeWithEulers
+};
+
+typedef NS_ENUM(NSInteger, MMFaceAlignmentVersion) {
+    MMFaceAlignmentVersion96Points   = 0,
+    MMFaceAlignmentVersion137Points  = 1
 };
 
 @interface MMEstimatedFaceInfo: NSObject <NSCopying>
@@ -87,6 +87,24 @@ typedef NS_ENUM(NSInteger, MMPoseEstimationType) {
 
 @property (nonatomic) BOOL featureStrict; // default NO
 
+@property (nonatomic) BOOL stabilizationModeEnabled; // default YES. depends on detector's advancedStabilizationModeEnabled.
+
+@property (nonatomic) BOOL expressionEnabled; // default YES. depends on detector's advancedExpressionDetectionEnabled.
+
+@property (nonatomic) BOOL eyeClassifyEnabled; // default YES. depends on detector's advancedExpressionDetectionEnabled.
+
+@property (nonatomic) BOOL beautyEnabled; // default NO.
+
+@property (nonatomic) BOOL skinEnabled; // default NO.
+
+@property (nonatomic) BOOL faceWarpGradualEnabled; // default NO.
+
+@property (nonatomic) int faceWarpGradualThreshold; // default is 10.
+
+@property (nonatomic) BOOL usesMixFaceDetection; // default is NO. YES if live broadcasting.
+
+@property (nonatomic) BOOL NPDAccelerateEnabled; // default is NO. YES if live broadcasting.
+
 @property (nonatomic) int faceFeatureVersion; // 
 
 @property (nonatomic, copy) NSArray *videoParamConstraintEulerAngles;
@@ -94,7 +112,8 @@ typedef NS_ENUM(NSInteger, MMPoseEstimationType) {
 // stable keypoints coefs. [0, INF). Use default settings when landmarksStableCoefficient < 0.
 @property (nonatomic) float landmarksStableCoefficient;
 
-@property (nonatomic) MMFaceDetectionPerformanceCategory performanceCategory;
+// stable pose coefs. // default is 2.0.
+@property (nonatomic) float poseStableCoefficient;
 
 @property (nonatomic, copy) NSArray<MMEstimatedFaceInfo *> *estimatedFaceInfos;
 
@@ -105,13 +124,22 @@ typedef NS_ENUM(NSInteger, MMPoseEstimationType) {
 @property (nonatomic) NSUInteger maximumFaceCount;
 
 @property (nonatomic) NSUInteger skipFrameCount; // default is 1, no frame skipping
+
+@property (nonatomic) MMCVBusinessType businessType;
+
+@property (nonatomic) MMFaceAlignmentVersion faceAlignmentVersion;
+
+@property (nonatomic) float landmarksScale;
+
 @end
 
 @interface MMFaceDetector : NSObject
 
+// default YES. Settings this may not activate stailizationMode, you must set the stabilizationModeEnabled of MMFaceDetectOptions as well.
 @property (nonatomic) BOOL advancedStabilizationModeEnabled;
 
-@property (nonatomic) BOOL advancedExpressionDetectionEnabled; //default NO
+//default NO. Settings this may not activate expression detection, you must set the expressionEnabled of MMFaceDetectOptions as well.
+@property (nonatomic) BOOL advancedExpressionDetectionEnabled;
 
 - (NSArray<MMFaceFeature *> *)featuresInPixelBuffer:(CVPixelBufferRef)pixelBuffer;
 

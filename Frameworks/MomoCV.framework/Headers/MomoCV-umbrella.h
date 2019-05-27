@@ -37,6 +37,7 @@
 #import "MMCVResources.h"
 #import "MMFaceCluster.h"
 #import "MMFaceQuality.h"
+#import "MMFaceQualityDetector.h"
 #import "MMLipsSegmenter.h"
 #import "MMDelaunayTriangulation.h"
 #import "MMCoreMLBodyDetector.h"
@@ -52,9 +53,9 @@
 #import "MMBodyJoint.h"
 #import "MMHandLandmarker.h"
 #import "MMFaceAttractivenessAnalyzer.h"
-#import "MMFaceQualityDetector.h"
 #import "MMArpetProcessor.h"
 #import "MMFaceAnimojiProcessor.h"
+#import "MMCVEventTracker.h"
 #import "MMBodyAdjustment.h"
 
 FOUNDATION_EXPORT double MomoCVVersionNumber;

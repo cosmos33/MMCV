@@ -37,11 +37,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 NS_ASSUME_NONNULL_END
 
-#import <MomoCV/MMImageSegmenter.h>
 #import <simd/simd.h>
 
 @class MMHairSeparationColor;
-
+@class MMImageSegmentationResult;
 
 NS_ASSUME_NONNULL_BEGIN
 

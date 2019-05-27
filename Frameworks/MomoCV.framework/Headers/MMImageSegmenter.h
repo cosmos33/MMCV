@@ -29,6 +29,20 @@ typedef NS_ENUM(NSInteger, MMImageSegmentationDataFormat) {
 @end
 
 
+@interface MMSegmenterOption : NSObject <NSCopying>
+@property (nonatomic, assign) float imageScale;
+@property (nonatomic, assign) MMCVImageOrientation orientation;
+@end
+
+@interface MMImageSegmenterOption : MMSegmenterOption <NSCopying>
+
+@end
+
+@interface MMHairSegmenterOption : MMSegmenterOption <NSCopying>
+
+@end
+
+
 @interface MMImageSegmenter : NSObject
 
 @property (nonatomic,copy,readonly) NSURL *modelURL;
@@ -42,6 +56,8 @@ typedef NS_ENUM(NSInteger, MMImageSegmentationDataFormat) {
 - (nullable instancetype)initWithModelBundle:(nullable NSBundle *)bundle error:(NSError **)error;
 
 - (nullable instancetype)initWithModelURL:(NSURL *)modelURL error:(NSError **)error NS_DESIGNATED_INITIALIZER;
+
+- (nullable MMImageSegmentationResult *)segmentationResultForPixelBuffer:(CVPixelBufferRef)pixelBuffer option:(MMImageSegmenterOption *)option;
 
 - (nullable MMImageSegmentationResult *)segmentationResultForPixelBuffer:(CVPixelBufferRef)pixelBuffer orientation:(MMCVImageOrientation)orientation;
 
@@ -60,6 +76,8 @@ typedef NS_ENUM(NSInteger, MMImageSegmentationDataFormat) {
 - (nullable instancetype)initWithModelBundle:(nullable NSBundle *)bundle error:(NSError **)error;
 
 - (nullable instancetype)initWithModelURL:(NSURL *)modelURL error:(NSError **)error NS_DESIGNATED_INITIALIZER;
+
+- (nullable MMImageSegmentationResult *)segmentationResultForPixelBuffer:(CVPixelBufferRef)pixelBuffer option:(MMHairSegmenterOption *)option;
 
 - (nullable MMImageSegmentationResult *)segmentationResultForPixelBuffer:(CVPixelBufferRef)pixelBuffer orientation:(MMCVImageOrientation)orientation;
 
