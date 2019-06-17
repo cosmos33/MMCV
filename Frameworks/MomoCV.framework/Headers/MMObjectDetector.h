@@ -14,11 +14,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MMObjectDetectOption :NSObject <NSCopying>
-@property (nonatomic, assign) MMCVImageOrientation orientation;
-@property (nonatomic, assign) float boundsScale;
-@end
-
 @interface MMObjectDetectionResult : NSObject <NSCopying>
 
 @property (nonatomic,readonly) NSArray<MMObjectFeature *> *features;
@@ -46,8 +41,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (MMObjectDetectionResult *)detectFeaturesInPixelBuffer:(CVPixelBufferRef)pixelBuffer;
 
 - (MMObjectDetectionResult *)detectFeaturesInPixelBuffer:(CVPixelBufferRef)pixelBuffer orientation:(MMCVImageOrientation)orientation;
-
-- (MMObjectDetectionResult *)detectFeaturesInPixelBuffer:(CVPixelBufferRef)pixelBuffer option:(MMObjectDetectOption *)option;
 
 @end
 

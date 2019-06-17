@@ -253,7 +253,7 @@ namespace mmcv
         int uv_step_;
         int uv_len_;
         uint8_t* uv_ptr_;
-        friend std::ostream& operator<<(std::ostream& out, const MMFrame& frame)
+		friend std::ostream& operator<<(std::ostream& out, const MMFrame& frame)
         {
             out << "width_: " << frame.width_ << "\n"
             << "height_:  "<< frame.height_ << "\n"
@@ -267,7 +267,7 @@ namespace mmcv
             return out;
         }
         std::shared_ptr<std::vector<uint8_t> > private_data_;
-        
+		
 
         std::shared_ptr<std::vector<uint8_t> > private_y_;
         std::shared_ptr<std::vector<uint8_t> > private_uv_;
@@ -298,6 +298,7 @@ namespace mmcv
 
         bool Parse(const std::string& params_str);
         std::string Dump();
+
     };
     
     struct MMCV_EXPORT MMPoint
@@ -321,8 +322,8 @@ namespace mmcv
         int x_;
         int y_;
     };
-    
-    struct MMCV_EXPORT MMPoint3f
+	
+	struct MMCV_EXPORT MMPoint3f
     {
         MMPoint3f() : x_(0), y_(0), z_(0) {}
 
@@ -377,6 +378,7 @@ namespace mmcv
         int y_;
         int width_;
         int height_;
+
     };
     
     struct MMCV_EXPORT MMBox : public MMRect
@@ -452,11 +454,8 @@ namespace mmcv
         // [MBT_NONE, MBT_SHORTVIDEO, MBT_LIVEVIDEO]
         // default is MBT_NONE
         int business_type_;
-        
-        // default is -1.0
-        float scale_factor_;
-        
-        friend std::ostream& operator<<(std::ostream& out, const BaseParams& baseparams)
+		
+		friend std::ostream& operator<<(std::ostream& out, const BaseParams& baseparams)
         {
             out << "BaseParams.rotate_degree_: " << baseparams.rotate_degree_ << "\n"
                 << "BaseParams.restore_degree_:  "<< baseparams.restore_degree_ << "\n"

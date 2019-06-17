@@ -94,10 +94,6 @@ public:
     virtual void from_java(JNIEnv *jenv, jobject params_obj, std::string cname = "com/momocv/facequality/FaceQualityParams");
 #endif
     
-    //default is false;
-    //if true, even face out of screen will evaluate face quality
-    bool evaluate_single_frame_;
-    
     //default is true
     bool strict_quality_switch_;
     bool liveness_detect_switch_;
