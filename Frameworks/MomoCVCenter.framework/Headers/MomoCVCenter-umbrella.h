@@ -13,6 +13,8 @@
 #import "MCCDetectorsCenter.h"
 #import "MCCEnum.h"
 #import "MCCDevice.h"
+#import "MCCDetecotrsPrivateCreator.h"
+#import "MCCDetectorsCenter+MMPrivate.h"
 #import "MCCSecretAESCrypt.h"
 #import "MCCSecretRSA.h"
 #import "NSData+MCCSecretBase64.h"

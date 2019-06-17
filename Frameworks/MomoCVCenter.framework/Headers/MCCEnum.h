@@ -18,5 +18,6 @@ typedef NS_ENUM(NSUInteger, MCCDetectorType) {
     MCCFaceDetectorTypeFacialExpression =7,         //普通表情检测器
     MCCFaceDetectorTypeFacerigV3 =8,                // FacerigV3检测器
     MCCFaceDetectorTypeHandGesture =9,              // 新版手势检测
-    MCCFaceDetectorTypeFaceQuality =10              //人脸质量检测器
+    MCCFaceDetectorTypeFaceQuality =10,              //人脸质量检测器
+    MCCFaceDetectorType137Face = 11,                 //人脸137检测器
 };
