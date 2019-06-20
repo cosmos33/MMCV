@@ -32,9 +32,9 @@ typedef void (^MCCDetectorMakeBlock)(id __nullable detector);
 /**
  提前准备Detectors资源（首次准备耗时较长）
  @param detectorTypes 探测器枚举数组。例:@[@(MCCFaceDetectorTypeFace), @(MCCFaceDetectorTypeObject)]
- @param MCCDetectorsPrepareBlock 异步结果回调。例:@{@(MCCFaceDetectorTypeFace):@(YES), @(MCCFaceDetectorTypeObject):@(YES)}
+ @param PrepareBlock 异步结果回调。例:@{@(MCCFaceDetectorTypeFace):@(YES), @(MCCFaceDetectorTypeObject):@(YES)}
  */
-- (void)prepareDetectors:(NSArray <NSNumber *>*)detectorTypes complete:(MCCDetectorsPrepareBlock)MCCDetectorsPrepareBlock;
+- (void)prepareDetectors:(NSArray <NSNumber *>*)detectorTypes complete:(MCCDetectorsPrepareBlock)PrepareBlock;
 
 /**
  判断检测器是否准备好了
