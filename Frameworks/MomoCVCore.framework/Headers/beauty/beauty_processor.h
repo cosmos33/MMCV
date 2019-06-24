@@ -87,6 +87,10 @@ namespace mmcv {
         
         float fat_face_small_chin_; // [0, 1], special warp effect to make face fatter
         
+        //default false
+        //添加原始thinface的欧拉角策略：thinface_euler_switch_ //true：使用thinface的欧拉角策略;false：使用xcamera欧拉角策略
+        bool thinface_euler_switch_;
+        
     };
     
     class MMCV_EXPORT BeautyWarpParams : public BaseParams

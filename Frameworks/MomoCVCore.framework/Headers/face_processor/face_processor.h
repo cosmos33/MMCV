@@ -286,6 +286,7 @@ class MMCV_EXPORT FaceProcessor
 {
 public:
     FaceProcessor();
+    FaceProcessor(int device_id);
     virtual ~FaceProcessor();
 
     bool load_model(const std::string& fd_path);
