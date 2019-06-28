@@ -50,7 +50,8 @@ typedef NS_ENUM(NSInteger, MMPoseEstimationType) {
 
 typedef NS_ENUM(NSInteger, MMFaceAlignmentVersion) {
     MMFaceAlignmentVersion96Points   = 0,
-    MMFaceAlignmentVersion137Points  = 1
+    MMFaceAlignmentVersion96WithEyePoints  = 1, // Abandoned
+    MMFaceAlignmentVersion137Points  = 2
 };
 
 @interface MMEstimatedFaceInfo: NSObject <NSCopying>
@@ -95,7 +96,7 @@ typedef NS_ENUM(NSInteger, MMFaceAlignmentVersion) {
 
 @property (nonatomic) BOOL beautyEnabled; // default NO.
 
-@property (nonatomic) BOOL skinEnabled; // default NO.
+@property (nonatomic) BOOL skinEnabled; // default YES.
 
 @property (nonatomic) BOOL faceWarpGradualEnabled; // default NO.
 
