@@ -20,5 +20,13 @@ typedef NS_ENUM(NSUInteger, MCCDetectorType) {
     MCCFaceDetectorTypeHandGesture =9,              // 新版手势检测
     MCCFaceDetectorTypeFaceQuality =10,              //人脸质量检测器
     MCCFaceDetectorType137Face = 11,                 //人脸137检测器
-    MCCFaceDetectorTypeFacerigTmpV2 = 12,            //临时放入，并不构造
 };
+
+typedef NS_ENUM(NSUInteger, MCCErrorLogType) {
+    MCCErrorLogTypeNone = 0,
+    MCCErrorLogTypeConfigError          = 1,    //config 错误
+    MCCErrorLogTypeDownloadModelError   = 2,    //下载错误
+    MCCErrorLogTypeLoadModelError       = 3     //加载模型错误
+};
+
+

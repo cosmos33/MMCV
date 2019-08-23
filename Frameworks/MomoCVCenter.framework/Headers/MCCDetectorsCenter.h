@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "MCCEnum.h"
+#import "MCCLogDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -55,6 +56,18 @@ typedef void (^MCCDetectorMakeBlock)(id __nullable detector);
  @param completed 结果回调
  */
 - (void)asyncMakeFaceDetector:(MCCDetectorType)detectorType complete:(MCCDetectorMakeBlock)completed;
+
+/**
+ 注册日志监听(会强持有，需要移除)
+ @param observer 日志监听者
+ */
+- (void)registLogObserver:(id<MCCLogDelegate>)observer;
+
+/**
+ 注册日志监听
+ @param observer 日志监听者
+ */
+- (void)removeLogObserver:(id<MCCLogDelegate>)observer;
 
 @end
 
