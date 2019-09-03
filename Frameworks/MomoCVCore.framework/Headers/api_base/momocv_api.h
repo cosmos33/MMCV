@@ -137,6 +137,7 @@
 #define BODYLANDMARK_MODEL_NAME_BIN "bodylandmark"
 #define BODYLANDMARK_MODEL_NAME_BIN_MACE_GPU "mace_gpu.bodylandmark"
 #define BODYLANDMARK_MODEL_NAME_BIN_MACE_CPU "mace_cpu.bodylandmark"
+#define BODYLANDMARK_MODEL_NAME_BIN_MNN "mnn.bodylandmark"
 
 #define BODYLANDMARKBLACK_MODEL_NAME_BIN "bodylandmarkblack"
 
