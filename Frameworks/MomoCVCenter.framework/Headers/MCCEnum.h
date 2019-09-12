@@ -20,6 +20,7 @@ typedef NS_ENUM(NSUInteger, MCCDetectorType) {
     MCCFaceDetectorTypeHandGesture =9,              // 新版手势检测
     MCCFaceDetectorTypeFaceQuality =10,              //人脸质量检测器
     MCCFaceDetectorType137Face = 11,                 //人脸137检测器
+    MCCFaceDetectorTypeLiveFace = 12                 //直播人脸检测器
 };
 
 typedef NS_ENUM(NSUInteger, MCCErrorLogType) {
