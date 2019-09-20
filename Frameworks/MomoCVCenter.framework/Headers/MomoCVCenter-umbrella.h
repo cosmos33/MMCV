@@ -16,11 +16,6 @@
 #import "MCCZipArchieveDelegate.h"
 #import "MCCLogDelegate.h"
 #import "MCCArchieve.h"
-#import "MCCSecretAESCrypt.h"
-#import "MCCSecretRSA.h"
-#import "NSData+MCCSecretBase64.h"
-#import "NSData+MCCSecretCommonCrypto.h"
-#import "NSString+MCCSecretBase64.h"
 
 FOUNDATION_EXPORT double MomoCVCenterVersionNumber;
 FOUNDATION_EXPORT const unsigned char MomoCVCenterVersionString[];
