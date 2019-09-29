@@ -41,6 +41,12 @@ typedef NS_ENUM(NSInteger, MMFaceDetectionMethod) {
     MMFaceDetectionMethodFastRCNN
 };
 
+typedef NS_ENUM(NSUInteger, MMFaceDetectionCamraPosition) {
+    MMFaceDetectionCamraUnspecified = 0,
+    MMFaceDetectionCamraBack        = 1,
+    MMFaceDetectionCamraFront       = 2,
+};
+
 typedef NS_ENUM(NSInteger, MMPoseEstimationType) {
     MMPoseEstimationTypeNormal,
     MMPoseEstimationTypePrecise,
@@ -131,6 +137,8 @@ typedef NS_ENUM(NSInteger, MMFaceAlignmentVersion) {
 @property (nonatomic) MMFaceAlignmentVersion faceAlignmentVersion;
 
 @property (nonatomic) float landmarksScale;
+
+@property (nonatomic) MMFaceDetectionCamraPosition cameraPosition;
 
 @end
 
