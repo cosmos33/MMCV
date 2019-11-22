@@ -47,6 +47,8 @@ public:
     std::vector<float> landmarks_104_;
     std::vector<float> landmarks_106_;
     std::vector<float> landmarks_137_;
+    
+    std::vector<float> landmarks137_occprobe_;
 
     // big_features features
     std::vector<uint8_t> features_;
@@ -70,11 +72,22 @@ public:
     int facepose_type_;
     
     /*
+     judge by occ model
      0: occlusion
      1: not occlusion
      2: unknown type
      */
     int occflag_;
+    
+    /*
+     judge by landmarks137_occprobe_
+    -1: default
+    0: no mouth and eye occ
+    1: mouth occ
+    2: eye occ
+    3: mouth and eye occ
+    */
+    int occtype_;
     
     // default is -1
     float feature_quality_score_;

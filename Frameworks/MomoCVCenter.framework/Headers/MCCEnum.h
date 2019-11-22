@@ -7,6 +7,10 @@
 
 #import <Foundation/Foundation.h>
 
+
+/**
+ * 检测器类型
+ */
 typedef NS_ENUM(NSUInteger, MCCDetectorType) {
     MCCFaceDetectorTypeNone = 0,
     MCCFaceDetectorTypeFace = 1,                    // 人脸检测
@@ -23,6 +27,10 @@ typedef NS_ENUM(NSUInteger, MCCDetectorType) {
     MCCFaceDetectorTypeLiveFace = 12                 //直播人脸检测器
 };
 
+
+/**
+ * 日志类型
+ */
 typedef NS_ENUM(NSUInteger, MCCErrorLogType) {
     MCCErrorLogTypeNone = 0,
     MCCErrorLogTypeConfigError          = 1,    //config 错误

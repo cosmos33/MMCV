@@ -58,6 +58,3 @@
 #import "MMCVEventTracker.h"
 #import "MMBodyAdjustment.h"
 
-FOUNDATION_EXPORT double MomoCVVersionNumber;
-FOUNDATION_EXPORT const unsigned char MomoCVVersionString[];
-
