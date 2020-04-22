@@ -40,5 +40,6 @@
 #include <MomoCVCore/hand_gesture/hand_gesture.h>
 #include <MomoCVCore/facerig_v3/facerig_v3.h>
 #include <MomoCVCore/face_quality/face_quality.h>
+#include <MomoCVCore/segmentMultiPart/segmentMultiPart.h>
 
 #endif

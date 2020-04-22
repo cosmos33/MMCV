@@ -14,8 +14,10 @@
 #import "MCCEnum.h"
 #import "MCCDevice.h"
 #import "MCCZipArchieveDelegate.h"
+#import "MCCNetworkUtils.h"
 #import "MCCLogDelegate.h"
-#import "MCCArchieve.h"
+#import "MCCDetecotrsPrivateCreator.h"
+#import "MCCDetectorsCenter+MMPrivate.h"
 
 FOUNDATION_EXPORT double MomoCVCenterVersionNumber;
 FOUNDATION_EXPORT const unsigned char MomoCVCenterVersionString[];

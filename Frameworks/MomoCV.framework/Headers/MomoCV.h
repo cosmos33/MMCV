@@ -57,4 +57,5 @@
 #import "MMFaceAnimojiProcessor.h"
 #import "MMCVEventTracker.h"
 #import "MMBodyAdjustment.h"
+#import "MMFaceDetector+TransferMatrix.h"
 

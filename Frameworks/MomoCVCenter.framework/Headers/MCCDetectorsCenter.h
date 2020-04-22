@@ -17,12 +17,26 @@ typedef void (^MCCDetectorMakeBlock)(id __nullable detector);
 
 @interface MCCDetectorsCenter : NSObject
 
+@property(atomic, copy,readonly) NSString *AppId;
+@property(atomic, copy,readonly) NSString *TrickId;
+@property(atomic, assign,readonly) BOOL enabledSyncUpload; //同步上传日志开关
+
+
 + (instancetype)sharedInstance;
 
 /**
  * 提前AppId
  */
 - (void)configAppId:(NSString *)appId;
+/**
+* 用户查日志标识
+*/
+- (void)configTrickId:(NSString *)trickId;
+/**
+* 设置日志上报方式 (默认为异步上传)
+*/
+- (void)configUploadLogsOption:(BOOL)enable;
+
 
 /**
  提前获取配置环境
