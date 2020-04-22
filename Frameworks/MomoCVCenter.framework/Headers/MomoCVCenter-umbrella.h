@@ -14,6 +14,7 @@
 #import "MCCEnum.h"
 #import "MCCDevice.h"
 #import "MCCZipArchieveDelegate.h"
+#import "MCCNetworkUtils.h"
 #import "MCCLogDelegate.h"
 #import "MCCArchieve.h"
 
