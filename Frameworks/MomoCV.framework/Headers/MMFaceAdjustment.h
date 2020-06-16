@@ -66,6 +66,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) NSUInteger gradualFrames;
 
+@property (nonatomic) int warpType; // default is 10, XCamera
+
 @property (nonatomic, class, readonly, strong) MMFaceAdjustmentOptions *defaultOptions;
 
 @end

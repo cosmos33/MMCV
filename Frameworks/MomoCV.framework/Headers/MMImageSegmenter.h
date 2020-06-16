@@ -28,6 +28,10 @@ typedef NS_ENUM(NSInteger, MMImageSegmentationDataFormat) {
 
 @end
 
+@interface MMFaceSegmentationResult : MMImageSegmentationResult
+
+@end
+
 
 @interface MMSegmenterOption : NSObject <NSCopying>
 @property (nonatomic, assign) float imageScale;
@@ -80,6 +84,33 @@ typedef NS_ENUM(NSInteger, MMImageSegmentationDataFormat) {
 - (nullable MMImageSegmentationResult *)segmentationResultForPixelBuffer:(CVPixelBufferRef)pixelBuffer option:(MMHairSegmenterOption *)option;
 
 - (nullable MMImageSegmentationResult *)segmentationResultForPixelBuffer:(CVPixelBufferRef)pixelBuffer orientation:(MMCVImageOrientation)orientation;
+
+- (void)reset;
+
+@end
+
+@class MMFaceFeature;
+@interface MMFaceSegmenter : NSObject
+
+@property (nonatomic,copy,readonly) NSURL *modelURL;
+
++ (BOOL)validateModelBundle:(NSBundle *)bundle;
+
++ (instancetype)new NS_UNAVAILABLE;
+
+- (instancetype)init NS_UNAVAILABLE;
+
+- (nullable instancetype)initWithModelBundle:(nullable NSBundle *)bundle error:(NSError **)error;
+
+- (nullable instancetype)initWithModelURL:(NSURL *)modelURL error:(NSError **)error NS_DESIGNATED_INITIALIZER;
+
+- (nullable MMFaceSegmentationResult *)segmentationResultForPixelBuffer:(CVPixelBufferRef)pixelBuffer
+                                                                 option:(MMImageSegmenterOption *)option
+                                                            faceFeature:(MMFaceFeature *)faceFeature;
+
+- (nullable MMFaceSegmentationResult *)segmentationResultForPixelBuffer:(CVPixelBufferRef)pixelBuffer
+                                                            orientation:(MMCVImageOrientation)orientation
+                                                            faceFeature:(MMFaceFeature *)faceFeature;
 
 - (void)reset;
 

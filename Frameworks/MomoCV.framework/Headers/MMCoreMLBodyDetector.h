@@ -44,7 +44,7 @@ API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0))
 - (instancetype)init NS_UNAVAILABLE;
 
 - (nullable instancetype)initWithModelURL:(nullable NSURL *)url error:(NSError **)error NS_DESIGNATED_INITIALIZER;
-
+- (NSArray<MMBodyFeature *> *)featuresInPixelBuffer:(CVPixelBufferRef)pixelBuffer;
 - (NSArray<MMBodyFeature *> *)featuresInPixelBuffer:(CVPixelBufferRef)pixelBuffer orientation:(MMCVImageOrientation)orientation;
 - (NSArray<MMBodyFeature *> *)featuresInPixelBuffer:(CVPixelBufferRef)pixelBuffer options:(MMCoreMLBodyDetectOptions*)options;
 
