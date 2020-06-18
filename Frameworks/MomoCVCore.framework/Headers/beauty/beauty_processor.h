@@ -24,6 +24,7 @@ namespace mmcv {
         NEW_BIG_HEAD = 13,
         FAT_FACE_FAT_LIP = 14,
         FAT_FACE_SMALL_CHIN = 15,
+        SLIGHT_BEAUTY = 16,
         WARP_TYPE_SIZE,
     };
 /**************************** Face warping ******************************/

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MMCV'
-  s.version          = '1.0.0'
+  s.version          = '1.1.2'
   s.summary          = 'MMCV'
 
   s.description      = <<-DESC
@@ -30,6 +30,8 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = { 'ENABLE_BITCODE' => '$(inherited) NO', 'OTHER_LDFLAGS' => '$(inherited) -ObjC', 'MTL_LANGUAGE_REVISION' => 'Metal12', 'CLANG_WARN_DOCUMENTATION_COMMENTS' => '$(inherited) NO'}
 
   s.dependency 'ZipArchive'
+  s.dependency 'MCCSecret'
+  s.dependency 'MMFileService'
   s.resources = 'Resources/*'
   
 end
