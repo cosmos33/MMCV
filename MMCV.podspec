@@ -32,6 +32,7 @@ Pod::Spec.new do |s|
   s.dependency 'ZipArchive'
   s.dependency 'MCCSecret'
   s.dependency 'MMFileService'
+  s.dependency 'PhotonHTTPDNS'
   s.resources = 'Resources/*'
   
 end
