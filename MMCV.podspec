@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MMCV'
-  s.version          = '1.1.2'
+  s.version          = '1.1.2-tantanTest'
   s.summary          = 'MMCV'
 
   s.description      = <<-DESC
@@ -32,6 +32,7 @@ Pod::Spec.new do |s|
   s.dependency 'ZipArchive'
   s.dependency 'MCCSecret'
   s.dependency 'MMFileService'
+  s.dependency 'PhotonHTTPDNS'
   s.resources = 'Resources/*'
   
 end
