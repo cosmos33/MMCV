@@ -18,6 +18,7 @@ typedef void (^MCCDetectorMakeBlock)(id __nullable detector);
 @interface MCCDetectorsCenter : NSObject
 
 @property(atomic, copy,readonly) NSString *AppId;
+@property(atomic, copy,readonly) NSString *businessType;//业务类型
 @property(atomic, copy,readonly) NSString *TrickId;
 @property(atomic, assign,readonly) BOOL enabledSyncUpload; //同步上传日志开关
 
@@ -28,6 +29,7 @@ typedef void (^MCCDetectorMakeBlock)(id __nullable detector);
  * 提前AppId
  */
 - (void)configAppId:(NSString *)appId;
+- (void)configAppId:(NSString *)appId businessType:(NSString *)businessType;
 /**
 * 用户查日志标识
 */
