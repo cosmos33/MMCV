@@ -27,6 +27,7 @@ typedef NS_ENUM(NSUInteger, MCCDetectorType) {
     MCCFaceDetectorTypeLiveFace = 12,                //直播人脸检测器
     MCCFaceDetectorTypeFaceSegment = 13,             //人脸分割
     MCCFaceDetectorTypeAttractivenessAnalyzer = 14,  //颜值测试
+    MCCFaceDetectorType240Face = 15,                 //人脸240检测器
 };
 
 

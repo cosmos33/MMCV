@@ -96,6 +96,10 @@ namespace mmcv {
         std::vector<float> warped_landmarks96_;
 
         std::vector<float> warped_landmarks104_;
+        
+        std::vector<float> warped_landmarks240_;
+        
+        
     };
 
     class MMCV_EXPORT VideoInfo : public FacesInfo
