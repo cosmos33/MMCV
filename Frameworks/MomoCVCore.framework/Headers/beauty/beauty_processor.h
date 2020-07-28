@@ -25,12 +25,6 @@ namespace mmcv {
         FAT_FACE_FAT_LIP = 14,
         FAT_FACE_SMALL_CHIN = 15,
         SLIGHT_BEAUTY = 16,
-        XCAMERA_END = 100,
-        
-        PTS240_START = 101,
-        THIN_FACE_BIG_EYE_PTS240 = 101,
-        PTS240_END =200,
-        
         WARP_TYPE_SIZE,
     };
 /**************************** Face warping ******************************/
@@ -114,8 +108,6 @@ namespace mmcv {
 
         std::vector<std::vector<float> > landmarks104_;
         
-        std::vector<std::vector<float> > landmarks240_;
-        
         std::vector<std::vector<float> > euler_angle_;
 
         int image_width_;
@@ -167,8 +159,6 @@ namespace mmcv {
         std::vector<std::vector<float> > warped_landmarks96_;
 
         std::vector<std::vector<float> > warped_landmarks104_;
-        
-        std::vector<std::vector<float> > warped_landmarks240_;
 
         std::vector<float> src_warp_points_;
 
