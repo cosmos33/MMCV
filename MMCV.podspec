@@ -18,33 +18,21 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://www.baidu.com/'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'bi.s_fish' => 'sunfeifish@gmail.com' }
-  s.source           = { :git => 'https://github.com/cosmos33/MMCV.git', :tag => '1.1.4'}
+  s.source           = { :git => 'https://github.com/cosmos33/MMCV.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'
 
-  
+  s.frameworks = 'Accelerate', 'CoreImage', 'AssetsLibrary'
+  s.weak_frameworks = 'CoreML', 'Vision'
   s.libraries = 'c++'
- # s.default_subspecs = {}
-  # s.vendored_frameworks = 'Frameworks/**/*.framework'
+
+  s.vendored_frameworks = 'Frameworks/**/*.framework'
   s.pod_target_xcconfig = { 'ENABLE_BITCODE' => '$(inherited) NO', 'OTHER_LDFLAGS' => '$(inherited) -ObjC', 'MTL_LANGUAGE_REVISION' => 'Metal12', 'CLANG_WARN_DOCUMENTATION_COMMENTS' => '$(inherited) NO'}
-
-s.subspec 'MomoCV' do |ss|
-ss.vendored_frameworks = ['Frameworks/ceres.framework','Frameworks/MNN.framework','Frameworks/MomoAPCore.framework','Frameworks/MomoCV.framework','Frameworks/MomoCVBase.framework','Frameworks/MomoCVCore.framework','Frameworks/opencv2.framework','Frameworks/protobufc.framework',]
-ss.frameworks = 'Accelerate', 'CoreImage', 'AssetsLibrary'
-ss.weak_frameworks = 'CoreML', 'Vision'
-
-end
-
-s.subspec 'MomoCVCenter' do |ss|
-ss.vendored_frameworks = 'Frameworks/MomoCVCenter.framework'
-
-
-end
 
   s.dependency 'ZipArchive'
   s.dependency 'MCCSecret'
-  s.dependency 'PhotonHTTPDNS'
   s.dependency 'MMFileService'
+  s.dependency 'PhotonHTTPDNS'
   s.resources = 'Resources/*'
   
 end
