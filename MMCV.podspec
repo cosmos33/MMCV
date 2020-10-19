@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MMCV'
-  s.version          = '1.1.5'
+  s.version          = '2.1.0-MMVideoSDK'
   s.summary          = 'MMCV'
 
   s.description      = <<-DESC
