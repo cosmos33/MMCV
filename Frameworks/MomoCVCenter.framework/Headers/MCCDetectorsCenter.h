@@ -22,6 +22,7 @@ typedef void (^MCCDetectorMakeBlock)(id __nullable detector);
 @property(atomic, copy,readonly) NSString *TrickId;
 @property(atomic, assign,readonly) BOOL enabledSyncUpload; //同步上传日志开关
 
+@property(atomic, assign,readonly) BOOL enableUploadLogs; //上传日志开关
 
 + (instancetype)sharedInstance;
 
@@ -38,6 +39,8 @@ typedef void (^MCCDetectorMakeBlock)(id __nullable detector);
 * 设置日志上报方式 (默认为异步上传)
 */
 - (void)configUploadLogsOption:(BOOL)enable;
+
+- (void)configEnabelUploadLogs:(BOOL)enable;
 
 
 /**
