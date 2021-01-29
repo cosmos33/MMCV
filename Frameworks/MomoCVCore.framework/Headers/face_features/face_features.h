@@ -76,8 +76,8 @@ public:
     bool load_model(const std::string& fd_path);
     bool load_model(const std::vector<uint8_t>& fd_buf);
     
-//    bool load_halfmodel(const std::string& fd_path);
-//    bool load_halfmodel(const std::vector<uint8_t>& fd_buf);
+    bool load_halfmodel(const std::string& fd_path);
+    bool load_halfmodel(const std::vector<uint8_t>& fd_buf);
 
     int get_model_version();
 

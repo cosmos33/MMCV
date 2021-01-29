@@ -25,6 +25,13 @@ namespace mmcv {
         FAT_FACE_FAT_LIP = 14,
         FAT_FACE_SMALL_CHIN = 15,
         SLIGHT_BEAUTY = 16,
+        XCAMERA_END = 100,
+        
+        PTS240_START = 101,
+        THIN_FACE_BIG_EYE_PTS240 = 101,
+        XCAMERA_PTS240 = 102,
+        PTS240_END =200,
+
         WARP_TYPE_SIZE,
     };
 /**************************** Face warping ******************************/
@@ -88,9 +95,14 @@ namespace mmcv {
         
         float fat_face_small_chin_; // [0, 1], special warp effect to make face fatter
         
+        float extern_ratio_; // [0.005, 0.05], affect both beauty module bounding box's width & height
+        
+        float height_bbox_ratio_; // [4.5, 18.5], afftect beauty module bounding box's height
+        
         //default false
         //添加原始thinface的欧拉角策略：thinface_euler_switch_ //true：使用thinface的欧拉角策略;false：使用xcamera欧拉角策略
         bool thinface_euler_switch_;
+        
         
     };
     
@@ -107,6 +119,8 @@ namespace mmcv {
         std::string Dump();
 
         std::vector<std::vector<float> > landmarks104_;
+        
+        std::vector<std::vector<float> > landmarks240_;
         
         std::vector<std::vector<float> > euler_angle_;
 
@@ -159,6 +173,8 @@ namespace mmcv {
         std::vector<std::vector<float> > warped_landmarks96_;
 
         std::vector<std::vector<float> > warped_landmarks104_;
+         
+        std::vector<std::vector<float> > warped_landmarks240_;
 
         std::vector<float> src_warp_points_;
 
