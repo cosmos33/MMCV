@@ -32,8 +32,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) BOOL usesCPUOnly; // Default NO
 
-@property (nonatomic, assign) float landmarksScale;
-
 @end
 
 @interface MMBodyDetector : NSObject

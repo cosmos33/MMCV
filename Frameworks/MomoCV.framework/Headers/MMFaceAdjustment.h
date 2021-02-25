@@ -44,8 +44,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) float eyeHeight;
 
-@property (nonatomic) BOOL thinfaceEulerSwitch;
-
 + (NSSet *)propertyKeys;
 
 @property (nonatomic, readonly) BOOL isIdentity;

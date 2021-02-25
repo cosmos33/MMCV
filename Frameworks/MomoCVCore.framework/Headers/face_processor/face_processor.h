@@ -37,9 +37,6 @@ public:
     std::vector<float> orig_landmarks_104_;
     std::vector<float> orig_landmarks_106_;
     std::vector<float> orig_landmarks_137_;
-    //liukai add
-    std::vector<float> orig_landmarks_240_;
-    //liukai add
 
     /* transformed coordinates */
     float face_rotate_degree_2d_;
@@ -50,9 +47,6 @@ public:
     std::vector<float> landmarks_104_;
     std::vector<float> landmarks_106_;
     std::vector<float> landmarks_137_;
-    //liukai add
-    std::vector<float> landmarks_240_;
-    //liukai add
     
     std::vector<float> landmarks137_occprobe_;
 
@@ -175,11 +169,10 @@ public:
     //Face detection interval, How many frames between two face detection?
     int frame_interval_;
     
-    // [0, 1, 2, 3]
+    // [0, 1, 2]
     // version 0 : 96 stable keypoints
     // version 1 : 96points add new eye points
     // version 2 : 137 points
-    // version 3 : 240 points
     // default is 0
     int face_alignment_version_;
     

@@ -24,8 +24,6 @@ FOUNDATION_EXPORT MMFaceAlignmentModelType const MMFaceAlignmentModelType96Point
 FOUNDATION_EXPORT MMFaceAlignmentModelType const MMFaceAlignmentModelType87Points NS_SWIFT_NAME(modelType87Points);
 FOUNDATION_EXPORT MMFaceAlignmentModelType const MMFaceAlignmentModelType137Points NS_SWIFT_NAME(modelType137Points);
 
-FOUNDATION_EXPORT MMFaceAlignmentModelType const MMFaceAlignmentModelType240Points NS_SWIFT_NAME(modelType240Points);
-
 @interface MMFaceDetectorOptions : NSObject <NSCopying>
 
 @property (nonatomic, copy) MMFaceAlignmentModelType faceAlignmentModelType;
@@ -59,8 +57,7 @@ typedef NS_ENUM(NSInteger, MMPoseEstimationType) {
 typedef NS_ENUM(NSInteger, MMFaceAlignmentVersion) {
     MMFaceAlignmentVersion96Points   = 0,
     MMFaceAlignmentVersion96WithEyePoints  = 1, // Abandoned
-    MMFaceAlignmentVersion137Points  = 2,
-    MMFaceAlignmentVersion240Points  = 3,
+    MMFaceAlignmentVersion137Points  = 2
 };
 
 @interface MMEstimatedFaceInfo: NSObject <NSCopying>
