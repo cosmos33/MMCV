@@ -31,7 +31,6 @@ FOUNDATION_EXPORT MMFaceWarpType const MMFaceWarpTypeRoundFace;
 FOUNDATION_EXPORT MMFaceWarpType const MMFaceWarpTypeBigHead2;
 FOUNDATION_EXPORT MMFaceWarpType const MMFaceWarpTypeFatFaceThinLip;
 FOUNDATION_EXPORT MMFaceWarpType const MMFaceWarpTypeFatFaceSmallChin;
-FOUNDATION_EXPORT MMFaceWarpType const MMFaceWarpTypeThinFaceBigEyePts240;
 
 @interface MMFaceWarpResult : NSObject <NSCopying>
 

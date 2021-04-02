@@ -20,9 +20,7 @@ typedef NS_ENUM(NSInteger, MMFaceLandmarks2DType) {
     MMFaceLandmarks2DType68,
     MMFaceLandmarks2DType96,
     MMFaceLandmarks2DType104,
-    MMFaceLandmarks2DType137,
-    MMFaceLandmarks2DType222,
-    MMFaceLandmarks2DType240
+    MMFaceLandmarks2DType137
 };
 
 @interface MMFaceLandmarks2D: NSObject <NSCopying>
@@ -110,8 +108,6 @@ typedef NS_ENUM(NSInteger, MMFaceLandmarks2DType) {
 @property (nonatomic,readonly,copy) NSArray<NSValue *> *landmarks104;
 
 @property (nonatomic,readonly,copy) NSArray<NSValue *> *landmarks137;
-@property (nonatomic,readonly,copy) NSArray<NSValue *> *landmarks222;
-@property (nonatomic,readonly,copy) NSArray<NSValue *> *landmarks240;
 
 @end
 

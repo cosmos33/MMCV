@@ -40,8 +40,6 @@ public:
     //liukai add
     std::vector<float> orig_landmarks_240_;
     //liukai add
-    std::vector<float> orig_landmarks_222_;
-    
 
     /* transformed coordinates */
     float face_rotate_degree_2d_;
@@ -55,7 +53,6 @@ public:
     //liukai add
     std::vector<float> landmarks_240_;
     //liukai add
-    std::vector<float> landmarks_222_;
     
     std::vector<float> landmarks137_occprobe_;
 

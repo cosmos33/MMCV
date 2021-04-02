@@ -20,16 +20,12 @@ struct MMFaceFeatureInternalRepresentation {
     std::vector<float> landmarks87;
     std::vector<float> landmarks104;
     std::vector<float> landmarks137;
-    std::vector<float> landmarks222;
-    std::vector<float> landmarks240;
     
     std::vector<float> origin_landmarks96;
     std::vector<float> origin_landmarks68;
     std::vector<float> origin_landmarks87;
     std::vector<float> origin_landmarks104;
     std::vector<float> origin_landmarks137;
-    std::vector<float> origin_landmarks222;
-    std::vector<float> origin_landmarks240;
     
     std::vector<float> euler_angles;
     

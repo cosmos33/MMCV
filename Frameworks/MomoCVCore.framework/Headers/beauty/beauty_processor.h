@@ -30,7 +30,6 @@ namespace mmcv {
         PTS240_START = 101,
         THIN_FACE_BIG_EYE_PTS240 = 101,
         XCAMERA_PTS240 = 102,
-        XCAMERA_PTS240_VER1 = 103,
         PTS240_END =200,
         
         WARP_TYPE_SIZE,
@@ -76,8 +75,6 @@ namespace mmcv {
         
         float eye_distance_;   // [-4.8, 4.8], eyes' distance from each other
         
-        float eye_height_;
-        
         float nose_size_; // [-0.6, 0.6], whole nose's size, both vertical and horizonal
         
         float nose_width_; // [-0.2, 0.2], root's width of nose
@@ -97,11 +94,6 @@ namespace mmcv {
         float fat_face_; // [0, 1], special warp effect to make face fatter
         
         float fat_face_small_chin_; // [0, 1], special warp effect to make face fatter
-        
-        float extern_ratio_; // [0.005, 0.05], affect both beauty module bounding box's width & height
-//
-        float height_bbox_ratio_; // [4.5, 18.5], afftect beauty module bounding box's height
-
         
         //default false
         //添加原始thinface的欧拉角策略：thinface_euler_switch_ //true：使用thinface的欧拉角策略;false：使用xcamera欧拉角策略
