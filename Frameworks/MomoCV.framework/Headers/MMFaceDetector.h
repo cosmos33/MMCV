@@ -143,6 +143,10 @@ typedef NS_ENUM(NSInteger, MMFaceAlignmentVersion) {
 
 @property (nonatomic) MMFaceDetectionCamraPosition cameraPosition;
 
+@property(nonatomic, assign) float closeEyeThreshold;
+
+@property(nonatomic, assign) float closeMouthThreshold;
+
 @end
 
 @interface MMFaceDetector : NSObject

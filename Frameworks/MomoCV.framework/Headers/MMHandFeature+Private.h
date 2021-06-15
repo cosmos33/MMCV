@@ -6,7 +6,7 @@
 #import <MomoCVCore/MomoCVCore.h>
 
 struct MMHandFeatureInternalRepresentation {
-//    mmcv::HandLandmarkInfo landmarkInfo;
+    mmcv::HandLandmarkInfo landmarkInfo;
     std::vector<mmcv::MMBox> gestures;
 };
 typedef struct MMHandFeatureInternalRepresentation MMHandFeatureInternalRepresentation;

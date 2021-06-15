@@ -44,6 +44,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) float eyeHeight;
 
+@property (nonatomic) float cheekboneWidth;
+
+@property (nonatomic) float jaw2Width;
+
 + (NSSet *)propertyKeys;
 
 @property (nonatomic, readonly) BOOL isIdentity;
