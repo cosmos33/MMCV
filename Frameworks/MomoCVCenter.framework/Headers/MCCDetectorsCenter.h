@@ -14,15 +14,15 @@ NS_ASSUME_NONNULL_BEGIN
 typedef void (^MCCConfigEnvironmentBlock)(BOOL result, NSString * __nullable errorMsg);
 typedef void (^MCCDetectorsPrepareBlock)(NSDictionary <NSNumber *,NSNumber *>* resultDic);
 typedef void (^MCCDetectorMakeBlock)(id __nullable detector);
-typedef void (^MCCDetectorMakePathBlock)(NSString* path);
 
 @interface MCCDetectorsCenter : NSObject
 
 @property(atomic, copy,readonly) NSString *AppId;
-@property(atomic, copy,readonly) NSString *businessType;//业务类型
 @property(atomic, copy,readonly) NSString *TrickId;
+@property(atomic, copy,readonly) NSString *businessType;//业务类型
 @property(atomic, assign,readonly) BOOL enabledSyncUpload; //同步上传日志开关
 
+@property(atomic, assign,readonly) BOOL enableUploadLogs; //上传日志开关
 
 + (instancetype)sharedInstance;
 
@@ -39,6 +39,8 @@ typedef void (^MCCDetectorMakePathBlock)(NSString* path);
 * 设置日志上报方式 (默认为异步上传)
 */
 - (void)configUploadLogsOption:(BOOL)enable;
+
+- (void)configEnabelUploadLogs:(BOOL)enable;
 
 
 /**
@@ -73,13 +75,6 @@ typedef void (^MCCDetectorMakePathBlock)(NSString* path);
  @param completed 结果回调
  */
 - (void)asyncMakeFaceDetector:(MCCDetectorType)detectorType complete:(MCCDetectorMakeBlock)completed;
-
-/**
- 异步获取探测器路径（可不先prepareDetectors 方法，内部会先异步调用准备后，再构造探测器）
- @param detectorType 探测器枚举值
- @param completed 结果回调
- */
-- (void)asyncMakeFacePathDetector:(MCCDetectorType)detectorType complete:(MCCDetectorMakePathBlock)completed;
 
 /**
  注册日志监听(会强持有，需要移除)
